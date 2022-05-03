@@ -170,7 +170,10 @@ video {
         top: 40%;
     }
     .mouse-main{
-        display: none;
+        display: none !important;
+    }
+    .overlay{
+        height: 100% !important;
     }
 }
 
@@ -350,12 +353,16 @@ video {
     display: flex;
     justify-content: center;
 }
+
+
+
+
 .img-slider{
   position: absolute;
   width: 100%;
   height: 100vh;
   margin: 0px;
-  background: #243243;
+  background: #1D212B;
 }
 
 .img-slider .slide{
@@ -386,18 +393,21 @@ video {
 .img-slider .slide .info h2{
   color: #fff;
   font-size: 45px;
-  text-transform: uppercase;
-  font-weight: 800;
+  text-transform: capitalize;
   letter-spacing: 2px;
+  font-weight: 500;
+  letter-spacing: 5px;
 }
 
 .img-slider .slide .info p{
   color: #fff;
-  background: rgba(0, 0, 0, 0.1);
-  font-size: 16px;
+  /*background: rgba(0, 0, 0, 0.1);*/
+  font-size: 20px;
   width: 60%;
   padding: 10px;
   border-radius: 4px;
+  font-family: sans-serif !important;
+  letter-spacing: 2px;
 }
 
 .img-slider .navigation{
@@ -484,6 +494,9 @@ video {
 }
 
 @media (max-width: 420px){
+    .ahimsa-text{
+        display: none;
+    }
   .img-slider{
     width: 320px;
     height: 200px;
@@ -506,18 +519,34 @@ video {
     bottom: 10px;
   }
 }
-    </style>
+header{
 
+    box-shadow: 0 -2px 8px rgb(0 0 0 / 9%), 0 4px 8px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 30%), 0 2px 6px rgb(0 0 0 / 15%);
+    }
+
+
+    *{
+    font-family: Degular,sans-serif !important;
+    letter-spacing: 2px;
+}
+.Header_contactButton__4GPu8:hover {
+    color: #fff !important;
+}
+
+.Header_menuListItem__rWgz2:nth-child(2) {
+    margin-left: 20px !important;
+}
+</style>
 
 </head>
 
 <body id="scroll-container">
-    
 
-    <div class="bg-video-wrap">
+    <div class="bg-video-wrap" id="intro">
         <video style="min-width: 100%; min-height: 100%;" src="images/ahimsa-logo-intro.webm" loop muted autoplay></video>
         <div class="overlay"></div>
     </div>
+
     <div class="mouse-main"> 
 <a href="#home">
     <div class="mouse_scroll">
@@ -534,7 +563,7 @@ video {
 </a>
 </div>
     
-    <header style="display: none;" class="Header_root__sMz8f" id="header-anchor">
+   <!--  <header style="display: none;" class="Header_root__sMz8f" id="header-anchor">
         <div class="Header_menuWrapper__4fgxo">
             <div style="display:flex;width:100%;" class="Header_menuWrapperLogo__RTgY_">
                 <img class="ahimsa-logo" style="width: 60px;" src="images/ahimsa-logo.png" alt="ahimsa global logo">
@@ -601,9 +630,46 @@ video {
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
 
-    <style>
+ <header class="Header_root__sMz8f" id="header-anchor">
+            <div class="Header_menuWrapper__4fgxo">
+                <div style="display:flex;width:100%;" class="Header_menuWrapperLogo__RTgY_">
+                    <!-- <svg width="59" height="26" viewBox="0 0 59 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="Header_logo__7q_1a">
+                        <path d="M17.2878 7.38529C17.2878 1.62826 14.0709 0.500244 8.5144 0.500244H0V25.1661H4.09426V14.2286H8.27209L13.5696 25.1661H18.2069L12.241 13.6771C14.2046 13.1006 17.2878 11.538 17.2878 7.38529ZM13.1936 7.38529C13.1936 11.2205 11.9903 13.0086 9.42516 13.0086H4.09426V1.74523H8.5144C11.7898 1.74523 13.1936 3.42472 13.1936 7.36023V7.38529Z" fill="white"></path>
+                        <path d="M31.6103 7.11791C30.2989 7.09812 29.0052 7.42162 27.8576 8.05628C26.7099 8.69094 25.7481 9.61472 25.0678 10.7359V0.500244H20.9902V25.1661H25.0678V14.0531C25.0678 11.8973 27.1483 8.76397 30.407 8.76397C33.39 8.76397 33.9582 10.4351 33.9582 13.5601V25.1661H38.0692V14.1701C38.0692 9.42407 35.9301 7.11791 31.6103 7.11791Z" fill="white"></path>
+                        <path d="M49.6416 7.11743C45.2382 7.11743 40.793 9.96671 40.793 16.3086C40.793 22.6506 45.2382 25.4998 49.6416 25.4998C54.045 25.4998 58.4902 22.7174 58.4902 16.3755C58.4902 10.0336 54.045 7.11743 49.6416 7.11743ZM54.1704 16.3086C54.1704 22.0406 53.5437 24.447 49.6416 24.447C46.4497 24.4805 45.1212 23.3441 45.1212 16.3755C45.1212 10.6352 45.7562 8.23709 49.6499 8.23709C52.8334 8.20367 54.1704 9.33168 54.1704 16.3755V16.3086Z" fill="white"></path>
+                    </svg> -->
+                    <img  style="width: 60px;" src="images/ahimsa-logo.png" alt="ahimsa global logo">
+                    <span class="ahimsa-text" style="text-align: left;color: #7993cb;text-transform: uppercase;letter-spacing: 1px;font-size:14px;">Advanced Health Information management<br> And Social Analytics</span>
+                </div>
+                <div class="" style="display:flex;margin-left:50%;width:0%;">
+                    <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
+                        <div class="Dropdown_header__13MbM">
+                            <div class="Dropdown_headerTitle__H7p36"><a class="Header_contactButton__4GPu8" href="#intro">Home</a></div>
+                        </div>
+                    </div>
+                    <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
+                        <div class="Dropdown_header__13MbM">
+                            <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#product">Products</a></div>
+                        </div>
+                    </div>
+                   
+                    <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
+                        <div class="Dropdown_header__13MbM">
+                            <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#contact">Contact</a></div>
+                        </div>
+                    </div>
+                    <a class="Header_contactButton__4GPu8" href=""></a>
+                </div>
+            </div>
+            <!-- <div class="Header_auth__3J_tf"><a class="Header_authLoginButton__BE0lh" target="_blank" href="">Login</a>
+            <button class="CaribeanButton_root__2FylR Header_headerButton__yN3cT">Get Started</button></div>
+             -->
+            
+        </header>
+
+<style>
         .slider-h1{
             transform: translate(150px, 200px);
         }
@@ -612,10 +678,6 @@ video {
             transform: translate(-10%, 20%);
         }
 
-        }
-        .img-slider .slide img{
-            height: 300px !important;
-        }
         .slider-img-sec{
             height: 500px;
         }
@@ -629,44 +691,120 @@ video {
             display: flex;
         }
 
+        .overlay-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+ /* background: radial-gradient(circle at 50% 50%, rgb(248 248 248 / 0%) 0%, #1d212b 76%);*/
+      background: rgb(29 33 43 / 68%);
+}
+.text-overlay {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.slider-info{
+    width: 60%;
+}
+.text-overlay h1{
+    font-size: 60px;
+    font-family: sans-serif !important;
+}
+.text-overlay p{
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: sans-serif !important;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+
     </style>
-    
 
+    <div class="img-slider">
 
-      <div class="img-slider">
       <div class="slide-main slide active">
-        <!-- <img src="1.jpg" alt=""> -->
-        <div class="slider-info info">
-          <h2 class="slider-h1">Slide 01</h2>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="slider-img-sec">
-            <img class="slide-img" src="images/app_laptop2.png" alt="png" style="">
-        </div>
-      </div>
-      <div class="slide-main slide">
         
         <div class="slider-info info">
-          <h2 class="slider-h1">Slide 02</h2>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h2 class="slider-h1" style="text-transform: lowercase;">datavaultforhealth</h2>
+          <p class="slider-p">platform homogenizes <br>
+            healthcare data and makes it<br>
+            available for clinicians <br> and
+            decision makers to drive<br>
+            better patient outcome.</p>
         </div>
-         <div class="slider-img-sec">
-            <img class="slide-img" src="images/Banking__1_-min.png" alt="png" style="">
+        <div class="slider-img-sec">
+            <img class="slide-img" src="images/datavault.png" alt="png">
+            <div class="overlay-text">
+    <div class="text-overlay">
+        <h1>30%</h1>
+        <p>of entire world’s
+stored data is
+generated in the
+healthcare industry.</p>
+    </div>
+  </div>
         </div>
       </div>
-      <div class="slide-main slide">
+      <div class="slide-main slide active">
         <div class="slider-info info">
-          <h2 class="slider-h1">Slide 03</h2>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2 class="slider-h1">Clinician driven
+            workflow<br>
+            management</h2>
+            <p class="slider-p">forms the core of all
+                applications developed
+                on datavault.health platform</p>
+            
         </div>
          <div class="slider-img-sec">
             <img class="slide-img" src="images/app_laptop2.png" alt="png" style="">
+            <div class="overlay-text">
+    <div class="text-overlay">
+        <h1>96% </h1>
+        <p>of
+physicians feel that
+the amount of time
+they spend on data
+input has increased
+in the last 10 years</p>
+
+    </div>
+  </div>
+        </div>
+      </div>
+      <div class="slide-main slide active">
+        <div class="slider-info info">
+            <h2 class="slider-h1">Clinician driven
+            workflow<br>
+            management</h2>
+            <p class="slider-p">forms the core of all
+                applications developed
+                on datavault.health platform</p>
+            
+        </div>
+         <div class="slider-img-sec">
+            <img class="slide-img" src="images/app_laptop2.png" alt="png" style="">
+            <div class="overlay-text">
+    <div class="text-overlay">
+        
+<h1>86%</h1>
+<p>agree
+it’s robbing them of
+joy in their jobs</p>
+    </div>
+  </div>
         </div>
       </div>
       <div class="navigation">
@@ -677,7 +815,9 @@ video {
     </div>
 
 
-            <div class="pin-spacer normal-view" id="home" style="order: 0; place-self: auto; grid-area: auto / auto / auto / auto; z-index: auto; float: none; flex-shrink: 1; display: grid; margin: 0px; inset: auto; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 100%; height: 100vh; padding: 0px 0px 120px;">
+
+
+        <div class="pin-spacer normal-view" id="home" style="order: 0; place-self: auto; grid-area: auto / auto / auto / auto; z-index: auto; float: none; flex-shrink: 1; display: grid; margin: 0px; inset: auto; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 100%; height: 100vh; padding: 0px 0px 120px;">
 
         <div class="container" id="container" style="transform: translate(0px, 0px); left: 0px; top: 0.001px; margin: 0px; max-width: 100%; width: 100%; max-height: 100vh; height: 100vh; padding: 0px; box-sizing: border-box; position: relative;background-image: url(images/homePageBg1.png);background-size: 100% 100%;">
             <div class="wrapper" id="wrapper">
@@ -708,6 +848,7 @@ video {
 
 
 
+
     <div class="pin-spacer responsive-view" id="home" style="order: 0; place-self: auto; grid-area: auto / auto / auto / auto; z-index: auto; float: none; flex-shrink: 1; display: none; margin: 0px; inset: auto; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 100%; height: 1000px; padding: 0px 0px 0px;">
         <div class="container" id="container" style="transform: translate(0px, 0px); left: 0px; top: 0.001px; margin: 0px; max-width: 100%; width: 100%; max-height: 100%; height: 100%; padding: 0px; box-sizing: border-box; position: fixed;background-image: url(images/homePageBg1.png);background-repeat: no-repeat;background-size: cover;">
             <div class="wrapper wrapper-mv" id="wrapper">
@@ -717,36 +858,49 @@ video {
                         <h1 id="intro-h1" style="transform: translate(0px, 0px);">1Advanced Health Information Management</h1>
                         <h3 id="intro-h3" style="transform: translate(0px, 0px);">And Social Analytics</h3> -->
                     </div>
-                    <img id="ahimsa-slider" src="images/app_laptop2.png" alt="png" style="transform: translate(-50%, 0%);">
-                    <ul class="ahimsa-models">
-                        <li style="transform: translate(0px, 0px); opacity: 1;">Simple</li>
-                        <li style="transform: translate(0px, 0px); opacity: 1;">Clean</li>
-                        <li style="transform: translate(0px, 0px); opacity: 1;">Intelligent</li>
-                        <li style="transform: translate(0px, 0px); opacity: 1;">Persuasive</li>
-                    </ul>
+                   
+                    
                 </div>
                 <div class="bkg"></div>
             </div>
         </div>
     </div>
 
+    <style>
+        .highlight-logo{
+            color: #76aaef !important;
+        }
+    </style>
+
     <div style="width:100%;position: relative;">
         <main class="Home_root__RQg_P" id="main">
             <section class="CardOptions_root__NSEI7" id="product" style="background-image: url(images/device-presentation-image-1.jpg);color:#0000;background: #76aaef40;">
-                <div class="CardOptions_mainTitle__9WPXP" style="padding-top: 100px;">
-                    <div class="navtest" style="color:#fff;">Lorem Ipsum</div>
+                <div class="CardOptions_mainTitle__9WPXP" style="padding-top: 100px;font-size: 60px;letter-spacing: 5px;">
+                    <div class="navtest" style="color:#fff;"><span class="highlight-logo">A</span>dvanced <span class="highlight-logo">H</span>ealth <span class="highlight-logo">I</span>nformation <span class="highlight-logo">M</span>anagement </div>
                     <div class="CardOptions_box__91vr_">
-                        <div style="color:#fff;">dummy text</div>
+                        
                         <span class="CardOptions_dynamicBox__IpLDd">
                             <div class="DynamicTitle_root__mwQc9 CardOptions_dynamicTxt__1pgHA">
-                                <div class="DynamicTitle_title__UHuh9" style="color: #76aaef;">for printing. </div>
+                                <div class="DynamicTitle_title__UHuh9" style="color:#fff;font-size: 60px;letter-spacing: 5px;">and <span class="highlight-logo">S</span>ocial <span class="highlight-logo">A</span>nalytics. </div>
                             </div>
                         </span>
                     </div>
+
+                    <p class="p-text">We are an inter disciplinary team of professionals <br>(clinicians, engineers,
+software developers, data scientists and QA / compliance experts)<br> working
+together to create a public / private sector enterprise wide data driven
+solution to:</p>
                 </div>
                 <style>
                 .Part_partInfoDescription__tP1_V span {
                     color: #fff;
+                }
+                .p-text{
+                    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 45px;
+    margin-top: 60px;
                 }
                 </style>
                 <div class="CardOptions_cards__o9cX9">
@@ -755,9 +909,10 @@ video {
                             <img src="images/screen1.png" alt="Corporate-cards-mobile 1" />
                         </div>
                         <div class="Part_partInfo__znN0e">
-                            <h3 class="Part_partInfoTitle__Wqebm">The standard Lorem Ipsum </h3>
-                            <div class="Part_partInfoDescription__tP1_V">Lorem ipsum <span>dolor sit amet, consectetur adipiscing elit, </span>, sed do eiusmod tempor <span>unlimited virtual and physical cards</span> incididunt ut labore et dolore magna aliqua.</div>
-                            <div class="Part_partInfoOportunities__BpVlx">
+                            <h3 class="Part_partInfoTitle__Wqebm">Simplify a clinician's life at the hospital</h3>
+                            <div class="Part_partInfoDescription__tP1_V"> by ensuring that key decision
+making information is available at all times</div>
+                            <!-- <div class="Part_partInfoOportunities__BpVlx">
                                 <div class="Part_iconItem__jMOCw">
                                     <img class="Part_iconItemIcon__JFRO7" src="images/s2.svg" alt="" />
                                     <div class="Part_iconItemText__4v2iu">
@@ -771,7 +926,7 @@ video {
                                         <div class="Part_iconItemTextBottom__w8oud">Services</div>
                                     </div>
                                 </div>
-                            </div><button class="CaribeanButton_root__2FylR Part_partInfoButton__f9eB_">View more</button>
+                            </div><button class="CaribeanButton_root__2FylR Part_partInfoButton__f9eB_">View more</button> -->
                         </div>
                     </section>
                     <section class="Part_part__qLmOl" id="two">
@@ -779,9 +934,11 @@ video {
                             <img src="images/screen2.png" alt="Corporate-cards-mobile 1" />
                         </div>
                         <div class="Part_partInfo__znN0e">
-                            <h3 class="Part_partInfoTitle__Wqebm">The standard Lorem Ipsum </h3>
-                            <div class="Part_partInfoDescription__tP1_V">Lorem ipsum <span>dolor sit amet, consectetur adipiscing elit, </span>, sed do eiusmod tempor <span>unlimited virtual and physical cards</span> incididunt ut labore et dolore magna aliqua.</div>
-                            <div class="Part_partInfoOportunities__BpVlx">
+                            <h3 class="Part_partInfoTitle__Wqebm">Enable follow up and tracking of every patient</h3>
+                            <div class="Part_partInfoDescription__tP1_V">data originates from
+his / her residence (via community nurse visit) and ensures further follow
+up and medical compliance (post procedure / advice)</div>
+                            <!-- <div class="Part_partInfoOportunities__BpVlx">
                                 <div class="Part_iconItem__jMOCw"><img class="Part_iconItemIcon__JFRO7" src="images/s3.svg" alt="" />
                                     <div class="Part_iconItemText__4v2iu">
                                         <div class="Part_iconItemTextTop__3XT5R">Total Care</div>
@@ -794,7 +951,7 @@ video {
                                         <div class="Part_iconItemTextBottom__w8oud">Services</div>
                                     </div>
                                 </div>
-                            </div><button class="CaribeanButton_root__2FylR Part_partInfoButton__f9eB_">View more</button>
+                            </div><button class="CaribeanButton_root__2FylR Part_partInfoButton__f9eB_">View more</button> -->
                         </div>
                     </section>
                     <style>
@@ -804,15 +961,25 @@ video {
                         background: #76aaef;
                         border: none;
                     }
+                    .list-text{
+                        list-style: initial;
+                    }
                     </style>
                     <section class="Part_part__qLmOl" id="three">
                         <div class="Part_mobImg__of2vq">
                             <img src="images/screen3.png" alt="Corporate-cards-mobile 1" />
                         </div>
                         <div class="Part_partInfo__znN0e">
-                            <h3 class="Part_partInfoTitle__Wqebm">The standard Lorem Ipsum </h3>
-                            <div class="Part_partInfoDescription__tP1_V">Lorem ipsum <span>dolor sit amet, consectetur adipiscing elit, </span>, sed do eiusmod tempor <span>unlimited virtual and physical cards</span> incididunt ut labore et dolore magna aliqua.</div>
-                            <div class="Part_partInfoOportunities__BpVlx">
+                            <h3 class="Part_partInfoTitle__Wqebm">"Advanced" AI driven engine <br>facilitates:</h3>
+                            <div class="Part_partInfoDescription__tP1_V">
+                                <ul class="list-text">
+                                    <li>Predictive analytics for managing patient throughput</li>
+                                    <li>Measure procedure / device efficacies</li>
+                                    <li>Study patient demographics vs outcomes</li>
+                                    <li>Mortality (KM curves) analysis and population health studies</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="Part_partInfoOportunities__BpVlx">
                                 <div class="Part_iconItem__jMOCw"><img class="Part_iconItemIcon__JFRO7" src="images/s4.svg" alt="" />
                                     <div class="Part_iconItemText__4v2iu">
                                         <div class="Part_iconItemTextTop__3XT5R">Online</div>
@@ -825,7 +992,40 @@ video {
                                         <div class="Part_iconItemTextBottom__w8oud">Services</div>
                                     </div>
                                 </div>
-                            </div><button class="CaribeanButton_root__2FylR Part_partInfoButton__f9eB_">View more</button>
+                            </div><button class="CaribeanButton_root__2FylR Part_partInfoButton__f9eB_">View more</button> -->
+                        </div>
+                    </section>
+                    <section class="Part_part__qLmOl" id="four">
+                        <div class="Part_mobImg__of2vq">
+                            <img src="images/screen3.png" alt="Corporate-cards-mobile 1" />
+                        </div>
+                        <div class="Part_partInfo__znN0e">
+                            <h3 class="Part_partInfoTitle__Wqebm">"Social Analytics"</h3>
+                            <div class="Part_partInfoDescription__tP1_V">
+                                <ul class="list-text">
+                                    <li>Community based, patient centric, clinician driven</li>
+                                    <li>Patient health and engagement as a central core</li>
+                                    <li>Data owned by the patient, consent given to share on a need basis</li>
+                                    <li>Real time communication with community nurse and care
+coordinators</li>
+<li>Critical health parameters can be entered, monitored and viewed
+on a daily basis</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="Part_partInfoOportunities__BpVlx">
+                                <div class="Part_iconItem__jMOCw"><img class="Part_iconItemIcon__JFRO7" src="images/s4.svg" alt="" />
+                                    <div class="Part_iconItemText__4v2iu">
+                                        <div class="Part_iconItemTextTop__3XT5R">Online</div>
+                                        <div class="Part_iconItemTextBottom__w8oud">Services</div>
+                                    </div>
+                                </div>
+                                <div class="Part_iconItem__jMOCw"><img class="Part_iconItemIcon__JFRO7" src="images/s6.svg" alt="" />
+                                    <div class="Part_iconItemText__4v2iu">
+                                        <div class="Part_iconItemTextTop__3XT5R">Better Care</div>
+                                        <div class="Part_iconItemTextBottom__w8oud">Services</div>
+                                    </div>
+                                </div>
+                            </div><button class="CaribeanButton_root__2FylR Part_partInfoButton__f9eB_">View more</button> -->
                         </div>
                     </section>
                     <div class="CardOptions_rightContent__eLfV6">
@@ -1048,12 +1248,13 @@ video {
           return;
         }
         repeater();
-      }, 3000);
+      }, 6000);
       }
       repeater();
     }
     repeat();
     </script>
+
     <script src="js/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
@@ -1073,7 +1274,7 @@ video {
         trigger: "#container",
         pin: true,
         start: "top top",
-        end: "+=8000"
+        end: "+=3500"
     });
 
 
@@ -1666,26 +1867,20 @@ video {
     $(document).ready(function() {
         $(window).scroll(function() {
 
-            if ($(this).scrollTop() > 4700) {
-                $('.panel').fadeOut();
-                $('#header-anchor').fadeIn();
-            } else {
-                $('.panel').fadeIn();
-                $('#header-anchor').fadeOut();
-            }
+            
 
             var $height = $(window).scrollTop();
 
-            if ($height >= 7000) {
+            if ($height >= 1800) {
                 $(".image-scroll-1").attr("src", "images/screen1.png");
             }
 
 
-            if ($height >= 7400) {
+            if ($height >= 2300) {
                 $(".image-scroll-1").attr("src", "images/screen2.png");
             }
 
-            if ($height >= 8000) {
+            if ($height >= 2800) {
                 $(".image-scroll-1").attr("src", "images/screen3.png");
             }
 
