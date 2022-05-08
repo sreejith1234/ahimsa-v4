@@ -1,2043 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charSet="utf-8" />
-    <title>Ahimsa - Advanced Health Information Management and Social Analytics</title>
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="css/scroll.css" />
-    <link rel="stylesheet" href="css/f3899f75dba6edb5.css" />
-    <link rel="stylesheet" href="css/a0a4f00c6c8ae6e9.css" />
-    <link rel="stylesheet" href="css/7798cd9431c91734.css" />
-    <link rel="stylesheet" href="css/1687f485bf34a7e8.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <style>
-    #intro-h3,
-    #intro-h1 {
-        line-height: calc((94 / var(--screen-size))*100*1vw);
-        font-weight: 200;
-        font-size: calc((44 / var(--screen-size))*100*1vw);
-        color: #ffff;
-        font-family: Degular;
-        text-transform: capitalize;
-    }
-
-    .specs dt,
-    .specs dd {
-        color: #ffff;
-        font-family: Degular;
-    }
-
-    .specs {
-        font-size: 20px;
-    }
-
-    .CardOptions_rightContentSticky__5B1eO {
-        top: -moz-calc((0/var(--screen-size))*100*1vw);
-        top: calc((0 / var(--screen-size))*100*1vw);
-    }
-
-    .Part_iconItemTextTop__3XT5R {
-        font-weight: 300;
-        font-size: calc((30 / var(--screen-size))*100*1vw);
-    }
-
-    .a {
-        opacity: 0;
-    }
-
-    .b {
-        opacity: 1;
-    }
-
-
-    /*mob-view*/
-    .panel img#ahimsa-slider {
-        width: 95%;
-        position: absolute;
-        z-index: 10;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .ahimsa-models {
-    position: absolute;
-    top: 44%;
-    left: 40%;
-    z-index: 11;
-}
-.ahimsa-models li {
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: #f0f0f0;
-    line-height: 2rem;
-    list-style-type: square;
-    font-family: Degular-Medium,sans-serif;
-    font-weight: 200;
-}
-.ahimsa-specs,
-.ahimsa-chars {
-  position: absolute;
-  top: 40%;
-  width: 70%;
-  z-index: 20;
-  padding: 1em;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10% 1fr;
-  font-family: Degular-Medium,sans-serif;
-  font-weight: 200;
-}
-.ahimsa-specs h2,
-.ahimsa-chars h2 {
-  grid-column: 1/3;
-  grid-row: 1/2;
-  color: #ffffff;
-  text-shadow: none;
-  font-family: Degular-Medium,sans-serif;
-  font-weight: 200;
-  font-size: calc((20 / var(--screen-size))*100*1vw);
-  line-height: calc((0 / var(--screen-size))*100*1vw);
-  padding-bottom: 30px;
-}
-.ahimsa-specs dl:nth-child(0),
-.ahimsa-chars dl:nth-child(0) {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-.ahimsa-specs dl:nth-child(1),
-.ahimsa-chars dl:nth-child(1) {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.ahimsa-specs dl dt,
-.ahimsa-chars dl dt {
-  text-transform: capitalize;
-  margin-bottom: 15px;
-  color: #ffff;
-  font-family: Degular-Medium,sans-serif;
-  font-size: 1rem;
-}
-.ahimsa-specs dl dd,
-.ahimsa-chars dl dd {
-  margin-bottom: 30px;
-  font-size: 0.8rem;
-  color: #717171;
-  font-family: Degular-Medium,sans-serif;
-}
-#hamburger{
-    margin-top: 20px;
-}
-
-
-.bg-video-wrap {
-    margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background: url(./images/ahimsa-main.png) no-repeat center center/cover;
-}
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.overlay {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  /*background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);*/
-  background-size: 3px 3px;
-  z-index: 2;
-}
-
-@media screen and (max-width: 768px) {
-    .bg-video-wrap{
-        height: 500px;
-    }
-    .wrapper-mv .ahimsa-models {
-        top: 40%;
-    }
-    .mouse-main{
-        display: none !important;
-    }
-    .overlay{
-        height: 100% !important;
-    }
-}
-
-.mouse_scroll {
-    display: block;
-    margin: 0 auto;
-    width: 24px;
-    height: 100px;
-    margin-top: 125px;
-}
-
-
-.m_scroll_arrows
-{
-  display: block;
-  width: 5px;
-  height: 5px;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  transform: rotate(45deg);
-   
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-  margin: 0 0 3px 4px;
-  
-  width: 16px;
-  height: 16px;
-}
-
-
-.unu
-{
-  margin-top: 1px;
-}
-
-.unu, .doi, .trei
-{
-    -webkit-animation: mouse-scroll 1s infinite;
-    -moz-animation: mouse-scroll 1s infinite;
-    animation: mouse-scroll 1s infinite;
-  
-}
-
-.unu
-{
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
-  -webkit-animation-direction: alternate;
-  
-  animation-direction: alternate;
-  animation-delay: alternate;
-}
-
-.doi
-{
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .2s;
-  animation-direction: alternate;
-  
-  margin-top: -6px;
-}
-
-.trei
-{
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: .3s;
-  animation-direction: alternate;
-  
-  
-  margin-top: -6px;
-}
-
-.mouse {
-  height: 42px;
-  width: 24px;
-  border-radius: 14px;
-  transform: none;
-  border: 2px solid #000;
-  top: 170px;
-}
-
-.wheel {
-  height: 5px;
-  width: 2px;
-  display: block;
-  margin: 5px auto;
-  background: #000;
-  position: relative;
-  
-  height: 4px;
-  width: 4px;
-  border: 2px solid #000;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-}
-
-.wheel {
-  -webkit-animation: mouse-wheel 0.6s linear infinite;
-  -moz-animation: mouse-wheel 0.6s linear infinite;
-  animation: mouse-wheel 0.6s linear infinite;
-}
-
-@-webkit-keyframes mouse-wheel{
-   0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    transform: translateY(6px);
-  }
-}
-@-moz-keyframes mouse-wheel {
-  0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-@-o-keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-@keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
-}
-
-@-webkit-keyframes mouse-scroll {
-
-  0%   { opacity: 0;}
-  50%  { opacity: .5;}
-  100% { opacity: 1;}
-}
-@-moz-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-@-o-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-@keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-.mouse-main{
-    margin-top: -14.5%;
-    z-index: 5001;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-.img-slider{
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  margin: 0px;
-  background: #1D212B;
-}
-
-.img-slider .slide{
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  clip-path: circle(0% at 0 50%);
-}
-
-.img-slider .slide.active{
-  clip-path: circle(150% at 0 50%);
-  transition: 2s;
-  transition-property: clip-path;
-}
-
-.img-slider .slide img{
-  z-index: 1;
-  width: 100%;
-  border-radius: 5px;
-}
-
-.img-slider .slide .info{
-  position: relative;
-  top: 0;
-  padding: 15px 30px;
-}
-
-.img-slider .slide .info h2{
-  color: #fff;
-  font-size: 45px;
-  text-transform: capitalize;
-  letter-spacing: 2px;
-  font-weight: 500;
-  letter-spacing: 5px;
-}
-
-.img-slider .slide .info p{
-  color: #fff;
-  /*background: rgba(0, 0, 0, 0.1);*/
-  font-size: 20px;
-  width: 60%;
-  padding: 10px;
-  border-radius: 4px;
- 
-  letter-spacing: 2px;
-}
-
-.img-slider .navigation{
-  z-index: 2;
-  position: absolute;
-  display: flex;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.img-slider .navigation .btn{
-  background: rgba(255, 255, 255, 0.5);
-  width: 12px;
-  height: 12px;
-  margin: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.img-slider .navigation .btn.active{
-  background: #2696E9;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-}
-@media (max-width: 1024px){
-    .CardOptions_mainTitle__9WPXP{
-        font-size: 40px !important;
-    }
-    .DynamicTitle_title__UHuh9{
-        font-size: 40px !important;
-    }
-}
-@media (max-width: 768px){
-    .CardOptions_mainTitle__9WPXP{
-        font-size: 20px !important;
-    }
-    .DynamicTitle_title__UHuh9{
-        font-size: 20px !important;
-    }
-}
-@media (max-width: 820px){
-  .img-slider{
-    width: 600px;
-    height: 375px;
-  }
-
-  .img-slider .slide .info{
-    padding: 10px 25px;
-  }
-
-  .img-slider .slide .info h2{
-    font-size: 35px;
-  }
-
-  .img-slider .slide .info p{
-    width: 70%;
-    font-size: 15px;
-  }
-
-  .img-slider .navigation{
-    bottom: 25px;
-  }
-
-  .img-slider .navigation .btn{
-    width: 10px;
-    height: 10px;
-    margin: 8px;
-  }
-}
-
-@media (max-width: 620px){
-  .img-slider{
-    width: 400px;
-    height: 250px;
-  }
-
-  .img-slider .slide .info{
-    padding: 10px 20px;
-  }
-
-  .img-slider .slide .info h2{
-    font-size: 30px;
-  }
-
-  .img-slider .slide .info p{
-    width: 80%;
-    font-size: 13px;
-  }
-
-  .img-slider .navigation{
-    bottom: 15px;
-  }
-
-  .img-slider .navigation .btn{
-    width: 8px;
-    height: 8px;
-    margin: 6px;
-  }
-}
-
-@media (max-width: 420px){
-  .img-slider{
-    width: 320px;
-    height: 200px;
-  }
-
-  .img-slider .slide .info{
-    padding: 5px 10px;
-  }
-
-  .img-slider .slide .info h2{
-    font-size: 25px;
-  }
-
-  .img-slider .slide .info p{
-    width: 90%;
-    font-size: 11px;
-  }
-
-  .img-slider .navigation{
-    bottom: 10px;
-  }
-}
-header{
-
-    box-shadow: 0 -2px 8px rgb(0 0 0 / 9%), 0 4px 8px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 30%), 0 2px 6px rgb(0 0 0 / 15%);
-    }
-
-
-    *{
-    font-family: Degular !important;
-    letter-spacing: 2px;
-}
-.Header_contactButton__4GPu8:hover {
-    color: #fff !important;
-}
-
-.Header_menuListItem__rWgz2:nth-child(2) {
-    margin-left: 20px !important;
-}
-.Header_contactButton__4GPu8{
-    width: 150px;
-}
-.Header_contactButton__4GPu8{
-    margin: 0px;
-}
-.Dropdown_root__j6MYC{
-    margin: 0px 15px;
-    
-}
-.Header_menuListItem__rWgz2:nth-child(3) {
-    margin-left: 20px !important;
-}
-.slider-h1{
-            transform: translate(150px, 200px);
-        }
-        .slider-img-sec{
-            height: 500px;
-            transform: translate(-10%, 20%);
-        }
-
-        .slider-img-sec{
-            height: 500px;
-        }
-        .img-slider .slide img {
-            height: 500px;
-        }
-        .slider-p{
-            transform: translate(150px, 210px);
-            line-height: 30px;
-        }
-        .slide-main{
-            display: flex;
-        }
-
-        .overlay-text {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          opacity: 1;
-          transition: .5s ease;
-         /* background: radial-gradient(circle at 50% 50%, rgb(248 248 248 / 0%) 0%, #1d212b 76%);*/
-          background: rgb(29 33 43 / 68%);
-        }
-        .text-overlay {
-          color: white;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-align: center;
-        }
-        .slider-info{
-            width: 60%;
-        }
-        .text-overlay h1{
-            font-size: 60px;
-            
-        }
-        .text-overlay p{
-            font-size: 20px;
-            margin-top: 10px;
-            
-            margin-bottom: 20px;
-            line-height: 30px;
-        }
-        .prep-text-li-2 li{
-            list-style: initial;
-        }
-        .ahimsa-tech{
-            right: 28%;bottom: 34%;position: absolute;
-        }
-        .highlight-logo{
-            color: #76aaef !important;
-        }
-        .Cus_product{
-            background-image: url(images/device-presentation-image-1.jpg);color:#0000;background: #76aaef40;padding-bottom: 250px;
-        }
-        .Cus_product_title{
-            padding-top: 100px;font-size: 45px;letter-spacing: 5px;margin-bottom: 0px;
-        }
-        .Cus_navtest{
-            color:#fff;
-            font-size: 55px;
-        }
-        .Part_partInfoDescription__tP1_V span {
-            color: #fff;
-        }
-        .p-text{
-            color: white;
-            font-size: 20px;
-            letter-spacing: 2px;
-            line-height: 45px;
-            margin-top: 25px;
-        }
-        .Part_part__qLmOl {
-            height: -webkit-calc((500/var(--screen-size))*100*1vw);
-            height: -moz-calc((500/var(--screen-size))*100*1vw);
-            height: calc((500 / var(--screen-size))*100*1vw);
-        }
-        .Cus_PartInfo{
-            margin-top: 80px;
-        }
-        .CaribeanButton_root__2FylR,
-        .Part_partInfoButton__f9eB_,
-        .EmailField_button__7uxvR {
-            background: #76aaef;
-            border: none;
-        }
-        .list-text{
-            list-style: initial;
-        }
-        .Links_customersBox__EHTpU{
-            margin-top: 0; 
-            padding-right: 30px;
-        }
-        .Links_customersBoxEl__Y7FaX {
-            font-size: 20px;
-        }
-        .Links_customersBoxEl__Y7FaX svg {
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            transform: rotate(45deg);
-            padding-left: 7px;
-        }
-        .Cus_partInfo__znN0e{
-            margin-top: 170px;
-        }
-        .prep-img-1 img{
-            height: 250px;
-            margin-top: 48px;
-        }
-        .prep-text-li li{
-            list-style: initial;
-        }
-        .services-li li{
-            list-style: initial;
-            color: #fff;
-            line-height: 45px;
-            font-size: 20px;
-        }
-        .Experience_content__QrQFF{
-            margin-top: 0px;
-        }
-        .Experience_blockTextTitle__7Am_h{
-            font-size: 30px;
-            line-height: 40px;
-        }
-        .Part_partInfoDescription__tP1_V{
-            font-size: 20px;
-        }
-        .prep-text-li li{
-            font-size: 20px;
-        }
-        .Experience_root__csOzn{
-            padding: 150px;
-        }
-        .Experience_block__Vju__:not(:first-child) {
-            margin-top: calc((145 / var(--screen-size))*100*1vw);
-        }
-        .FooterGrow_title__siwtB{
-            font-size: 55px;
-        }
-        .Experience_title__VYjZQ{
-            max-width: 88%;font-size: 55px;padding: 0px;
-        }
-        .FooterGrow_indicatorsItem__985wa img {
-            width: calc((42 / var(--screen-size))*100*1vw);
-            height: -webkit-calc((42/var(--screen-size))*100*1vw);
-            height: -moz-calc((42/var(--screen-size))*100*1vw);
-            height: calc((42 / var(--screen-size))*100*1vw);
-        }
-        .Links_hoverButton__R6ViY:hover,
-        .Links_hoverButton__R6ViY:hover a {
-            color: #76aaef !important;
-        }
-
-        .Links_customersBox__EHTpU,
-        .Links_customersBoxEl__Y7FaX :hover {
-            color: #76aaef !important;
-        }
-        .Links_customersBoxEl__Y7FaX:hover svg {
-            fill: #76aaef;
-        }
-        .Links_customersBoxEl__Y7FaX:hover {
-            color: #76aaef !important;
-        }
-        .ahimsa-text{
-            text-align: left;color: #7993cb;text-transform: uppercase;letter-spacing: 1px;font-size:14px;
-        }
-        .Header_menuWrapperLogo__RTgY_{
-            padding-right: 0%;
-            width: 50%;
-            
-        }
-        .Logo_Img img{
-            height: 70px;
-        }
-
-/*Responsive fix start*/
-
-@media only screen and (max-width: 768px){
-    .Logo_Img img{
-            height: 70px;
-        }
-        .ahimsa-text{
-            display: none;
-        }
-    .bg-video-wrap {
-        margin-top: 93px;
-    }
-    .img-slider {
-        width: 100%;
-        height: 250px;
-    }
-    .img-slider .slide .info h2 {
-        font-size: 20px;
-    }
-    .slider-h1 {
-        transform: translate(0px, 35px) !important;
-    }
-    .slider-p {
-        transform: translate(-10px, 29px) !important;
-        line-height: 16px !important;
-        font-size: 10px !important;
-    }
-    .slider-img-sec {
-        height: 100% !important;
-        transform: translate(-12%, 27%) !important;
-    }
-    .text-overlay p {
-        font-size: 10px !important;
-        line-height: 16px !important;
-    }
-    .img-slider .slide img {
-        height: 150px !important;
-    }
-
-    .Part_part__qLmOl {
-        height: 100% !important;
-        padding-top: 0px !important;
-    }
-    .Cus_PartInfo{
-        margin-top: 0px !important;
-    }
-    .Cus_partInfo__znN0e{
-        margin-top: 0px !important;
-    }
-    .Cus_product {
-        padding-bottom: 50px !important;
-    }
-    .Experience_root__csOzn {
-        padding: 25px !important;
-    }
-    .Experience_blockTextTitle__7Am_h {
-        font-size: 20px !important;
-        line-height: 30px !important;
-    }
-    .prep-text-li li {
-        font-size: 14px !important;
-    }
-    .Experience_title__VYjZQ{
-        font-size: 20px !important;
-        line-height: 30px !important;
-        max-width: 100% !important;
-    }
-    .prep-img-1 img {
-        height: 140px !important;
-        margin-top: 0px !important;
-    }
-    .Cus_product_title {
-        padding-top: 0px !important;
-    }
-    .p-text {
-        font-size: 14px !important;
-        line-height: 25px !important;
-    }
-    .slider-info {
-        width: 83% !important;
-    }
-    .Cus_navtest {
-        line-height: 30px !important;
-    }
-    .Cus_navtest{
-        font-size: 20px !important;
-    }
-    .Part_partInfoDescription__tP1_V {
-        font-size: 14px !important;
-        line-height: 25px !important;
-    }
-    .Part_partInfoTitle__Wqebm{
-        font-size: 20px !important;
-        line-height: 30px !important;
-    }
-    .Experience_blockText__ccQQd {
-        margin-top: 0px !important;
-    }
-    .Telehealth_Sec{
-        margin-top: 50px !important;
-    }
-    .Telehealth_Img{
-        margin-left: 0px !important;
-    }
-    .Telehealth_Title{
-        margin-top: 30px;
-    }
-    .prep-text-li-2 li{
-        font-size: 14px;
-    }
-    .FooterGrow_title__siwtB {
-        font-size: 20px !important;
-        line-height: 30px !important;
-    }
-    .services-li li {
-        font-size: 14px !important;
-    }
-    .ahimsa-tech{
-        position: relative !important;
-        right: 0% !important;
-        bottom: 0% !important;
-        height: 137px !important;
-        margin-top: 15% !important;
-    }
-    .Experience_root__csOzn{
-        min-height: 100% !important;
-    }
-    .Header_mobileMenuButton__9qrK8{
-        padding-top: 25px;
-        padding-right: 25px;
-    }
-    .MobileMenu_root__xl8fC{
-        padding: 11.1px;
-    }
-    .Menu_close svg{
-        margin-right: 25px;
-    }
-    .MobileMenu_navigation__flILT{
-        margin-left: 15px;
-    }
-}
-
-/*Responsive fix end*/
-</style>
-
-</head>
-
-<body id="scroll-container">
-
-    <div class="bg-video-wrap" id="intro">
-        <video style="min-width: 100%; min-height: 100%;" src="images/ahimsa-logo-intro.webm" loop muted autoplay></video>
-        <div class="overlay"></div>
-    </div>
-
-    <div class="mouse-main"> 
-        <a href="#home">
+   <head>
+      <meta charSet="utf-8">
+      <title>Ahimsa - Advanced Health Information Management and Social Analytics</title>
+      <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no">
+
+      <meta name="title" content="ahimsa">
+      <meta name="keywords" content="Advanced, Health, Information, Management, and Social, Analytics, Ahimsa, ahimsa, Advanced Health Care,datavaultforhealth, datavault, healthcare, ahimsa health, datavault.health">
+      <meta name="description" content="Advanced Health Information Management and Social Analytics">
+      <meta name="language" content="English">
+
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+
+      <link rel="stylesheet" href="css/scroll.css">
+      <link rel="stylesheet" href="css/f3899f75dba6edb5.css">
+      <link rel="stylesheet" href="css/a0a4f00c6c8ae6e9.css">
+      <link rel="stylesheet" href="css/7798cd9431c91734.css">
+      <link rel="stylesheet" href="css/1687f485bf34a7e8.css">
+      <link rel="stylesheet" href="css/responsive.css">
+
+   </head>
+   <body id="scroll-container">
+      <div class="bg-video-wrap" id="intro">
+         <video src="images/ahimsa-logo-intro.webm" loop muted autoplay></video>
+         <div class="overlay"></div>
+      </div>
+      <div class="mouse-main">
+         <a href="#home">
             <div class="mouse_scroll">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div>
-                    <span class="m_scroll_arrows unu"></span>
-                    <span class="m_scroll_arrows doi"></span>
-                    <span class="m_scroll_arrows trei"></span>
-                </div>
+               <div class="mouse">
+                  <div class="wheel"></div>
+               </div>
+               <div>
+                  <span class="m_scroll_arrows unu"></span>
+                  <span class="m_scroll_arrows doi"></span>
+                  <span class="m_scroll_arrows trei"></span>
+               </div>
             </div>
-        </a>
-    </div>
-    
-
-        <header class="Header_root__sMz8f Header_sticky__46TFJ Header_stickyOn__z4VUA" id="header-anchor">
-            <div class="Header_menuWrapper__4fgxo">
-                <div class="Header_menuWrapperLogo__RTgY_ Logo_Img">
-                    <img src="images/ahimsa-logo.png" alt="ahimsa global logo">
-                    <div class="ahimsa-text">Advanced Health Information management<br> And Social Analytics</div>
-                </div>
-                <div class="Header_menuWrapperLogo__RTgY_">
-                   <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
-                        <div class="Dropdown_header__13MbM">
-                            <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#intro">Home</a></div>
-                        </div>
-                    </div>
-                    <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
-                        <div class="Dropdown_header__13MbM">
-                            <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#about">Products</a></div>
-                        </div>
-                    </div>
-
-                    <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
-                        <div class="Dropdown_header__13MbM">
-                            <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#services">Services</a></div>
-                        </div>
-                    </div>
-                    <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
-                        <div class="Dropdown_header__13MbM">
-                            <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#contact">Contact</a></div>
-                        </div>
-                    </div>
-                </div>
+         </a>
+      </div>
+      <header class="Header_root__sMz8f Header_sticky__46TFJ Header_stickyOn__z4VUA" id="header-anchor">
+         <div class="Header_menuWrapper__4fgxo">
+            <div class="Header_menuWrapperLogo__RTgY_ Logo_Img">
+               <img src="images/ahimsa-logo.png" alt="ahimsa global logo">
+               <div class="ahimsa-text">Advanced Health Information management<br> And Social Analytics</div>
             </div>
-            <div class="Header_mobileMenuButton__9qrK8">
-                <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="Header_mobileMenuButtonIcon__TiMFu">
-                    <rect x="0.734375" y="0.758057" width="20" height="1" fill="white"></rect>
-                    <rect x="0.734375" y="14.7581" width="20" height="1" fill="white"></rect>
-                    <rect x="0.734375" y="7.75806" width="20" height="1" fill="white"></rect>
-                </svg>
+            <div class="Header_menuWrapperLogo__RTgY_">
+               <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
+                  <div class="Dropdown_header__13MbM">
+                     <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#intro">Home</a></div>
+                  </div>
+               </div>
+               <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
+                  <div class="Dropdown_header__13MbM">
+                     <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#about">Products</a></div>
+                  </div>
+               </div>
+               <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
+                  <div class="Dropdown_header__13MbM">
+                     <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#services">Services</a></div>
+                  </div>
+               </div>
+               <div class="Dropdown_root__j6MYC Header_menuListItem__rWgz2">
+                  <div class="Dropdown_header__13MbM">
+                     <div class="Dropdown_headerTitle__H7p37"><a class="Header_contactButton__4GPu8" href="#contact">Contact</a></div>
+                  </div>
+               </div>
             </div>
-            <div class="MobileMenu_root__xl8fC Animated_animated__ByRTS" style="pointer-events:none;opacity:0;">
-
-                <div class="MobileMenu_headline___E_Ze Menu_close">
-                    <div class="d-flex" style="display: flex;">
-  
-                    <img  style="height: 70px;" src="images/ahimsa-logo.png" alt="ahimsa global logo">
-                    <span class="ahimsa-text" style="text-align: left;color: #7993cb;text-transform: uppercase;letter-spacing: 1px;font-size:14px;">Advanced Health Information <br>Management<br> And Social Analytics</span>
-                </div>
-                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileMenu_headlineCross__Bht5F">
-                        <rect x="0.152344" y="14.9753" width="20" height="1" transform="rotate(-45 0.152344 14.9753)" fill="white"></rect>
-                        <rect width="20" height="1" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 15 14.9753)" fill="white"></rect>
-                    </svg>
-                </div>
-                <div class="MobileMenu_navigation__flILT">
-                    <div class="Item_root__z0qbH MobileMenu_navigationItem__ftNAg">
-                        <div class="Item_title__1vHx7">
-                            <div class="M_Link"><a href="#intro">Home</a></div>
-                        </div>
-                    </div>
-                    <div class="Item_root__z0qbH MobileMenu_navigationItem__ftNAg">
-                        <div class="Item_title__1vHx7">
-                            <div class="M_Link"><a href="#about">Products</a></div>
-                        </div>
-                    </div>
-                    <div class="Item_root__z0qbH MobileMenu_navigationItem__ftNAg">
-                        <div class="Item_title__1vHx7">
-                            <div class="M_Link"><a href="#services">Services</a></div>
-                        </div>
-                    </div>
-                    <div class="Item_root__z0qbH MobileMenu_navigationItem__ftNAg">
-                        <div class="Item_title__1vHx7">
-                            <div class="M_Link"><a href="#contact">Contact</a></div>
-                        </div>
-                    </div>
-                </div>
+         </div>
+         <div class="Header_mobileMenuButton__9qrK8">
+            <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="Header_mobileMenuButtonIcon__TiMFu">
+               <rect x="0.734375" y="0.758057" width="20" height="1" fill="white"></rect>
+               <rect x="0.734375" y="14.7581" width="20" height="1" fill="white"></rect>
+               <rect x="0.734375" y="7.75806" width="20" height="1" fill="white"></rect>
+            </svg>
+         </div>
+         <div class="MobileMenu_root__xl8fC Animated_animated__ByRTS Res_Menu_List">
+            <div class="MobileMenu_headline___E_Ze Menu_close">
+               <div class="mobile-logo">
+                  <img src="images/ahimsa-logo.png" alt="ahimsa global logo">
+               </div>
+               <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileMenu_headlineCross__Bht5F">
+                  <rect x="0.152344" y="14.9753" width="20" height="1" transform="rotate(-45 0.152344 14.9753)" fill="white"></rect>
+                  <rect width="20" height="1" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 15 14.9753)" fill="white"></rect>
+               </svg>
             </div>
-        </header>
-
-    <div class="img-slider">
-
-      <div class="slide-main slide active">
-        
-        <div class="slider-info info">
-          <h2 class="slider-h1" style="text-transform: lowercase;">datavaultforhealth</h2>
-          <p class="slider-p">platform homogenizes <br>
-            healthcare data and makes it<br>
-            available for clinicians <br> and
-            decision makers to drive<br>
-            better patient outcome.</p>
-        </div>
-        <div class="slider-img-sec">
-            <img class="slide-img" src="images/datavault.png" alt="png">
-            <div class="overlay-text">
-    <div class="text-overlay">
-        <h1>30%</h1>
-        <p>of entire world’s
-stored data is
-generated in the
-healthcare industry.</p>
-    </div>
-  </div>
-        </div>
+            <div class="MobileMenu_navigation__flILT">
+               <div class="Item_root__z0qbH MobileMenu_navigationItem__ftNAg">
+                  <div class="Item_title__1vHx7">
+                     <div class="M_Link"><a href="#intro">Home</a></div>
+                  </div>
+               </div>
+               <div class="Item_root__z0qbH MobileMenu_navigationItem__ftNAg">
+                  <div class="Item_title__1vHx7">
+                     <div class="M_Link"><a href="#about">Products</a></div>
+                  </div>
+               </div>
+               <div class="Item_root__z0qbH MobileMenu_navigationItem__ftNAg">
+                  <div class="Item_title__1vHx7">
+                     <div class="M_Link"><a href="#services">Services</a></div>
+                  </div>
+               </div>
+               <div class="Item_root__z0qbH MobileMenu_navigationItem__ftNAg">
+                  <div class="Item_title__1vHx7">
+                     <div class="M_Link"><a href="#contact">Contact</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div class="img-slider">
+         <div class="slide-main slide active">
+            <div class="slider-info info">
+               <h2 class="slider-h1 datavault-h1">datavaultforhealth</h2>
+               <p class="slider-p">platform homogenizes <br>healthcare data and makes it<br>available for clinicians <br> and decision makers to drive<br>better patient outcome.</p>
+            </div>
+            <div class="slider-img-sec">
+               <img class="slide-img" src="images/datavault.webp" alt="ahimsa platform homogenizes healthcare data and makes it available for clinicians and decision makers to drive better patient outcome">
+               <div class="overlay-text">
+                  <div class="text-overlay">
+                     <h1>30%</h1>
+                     <p>of entire world’s stored data is generated in the healthcare industry.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="slide-main slide">
+            <div class="slider-info info">
+               <h2 class="slider-h1">Clinician driven<br>workflow<br>management</h2>
+               <p class="slider-p">forms the core of all<br>applications developed<br>on datavault.health platform</p>
+            </div>
+            <div class="slider-img-sec">
+               <img class="slide-img" src="images/app_laptop2.webp" alt="ahimsa physicians feel that the amount of time they spend on data input has increased in the last 10 years">
+               <div class="overlay-text">
+                  <div class="text-overlay">
+                     <h1>96% </h1>
+                     <p>of physicians feel that the amount of time they spend on data input has increased in the last 10 years</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="slide-main slide">
+            <div class="slider-info info">
+               <h2 class="slider-h1">Modular architecture <br>enables data <br>consolidation</h2>
+               <p class="slider-p">from different sources and validating them against verified databases prior to publishing information on software applications.</p>
+            </div>
+            <div class="slider-img-sec">
+               <img class="slide-img" src="images/app_laptop2.webp" alt="ahimsa from different sources and validating them against verified databases prior to publishing information on software applications">
+               <div class="overlay-text">
+                  <div class="text-overlay">
+                     <h1>86%</h1>
+                     <p>of physicians agree entering data multiple times is robbing them of joy in their jobs</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+         </div>
       </div>
-      <div class="slide-main slide">
-        <div class="slider-info info">
-            <h2 class="slider-h1">Clinician driven<br>
-            workflow<br>
-            management</h2>
-            <p class="slider-p">forms the core of all<br>
-                applications developed<br>
-                on datavault.health platform</p>
-            
-        </div>
-         <div class="slider-img-sec">
-            <img class="slide-img" src="images/app_laptop2.png" alt="png" style="">
-            <div class="overlay-text">
-    <div class="text-overlay">
-        <h1>96% </h1>
-        <p>of
-physicians feel that
-the amount of time
-they spend on data
-input has increased
-in the last 10 years</p>
-
-    </div>
-  </div>
-        </div>
-      </div>
-      <div class="slide-main slide">
-        <div class="slider-info info">
-            <h2 class="slider-h1">Modular architecture <br>enables data <br>consolidation</h2>
-            <p class="slider-p">from different sources  and validating them against verified databases prior to publishing information on software applications.</p>
-            
-        </div>
-         <div class="slider-img-sec">
-            <img class="slide-img" src="images/app_laptop2.png" alt="png" style="">
-            <div class="overlay-text">
-    <div class="text-overlay">
-        
-<h1>86%</h1>
-<p>of physicians agree entering data multiple times is robbing them of joy in their jobs</p>
-
-    </div>
-  </div>
-        </div>
-      </div>
-      <div class="navigation">
-        <div class="btn active"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-      </div>
-    </div>
-
-
-
-
-        <div class="pin-spacer normal-view" id="home" style="order: 0; place-self: auto; grid-area: auto / auto / auto / auto; z-index: auto; float: none; flex-shrink: 1; display: grid; margin: 0px; inset: auto; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 100%; height: 100vh; padding: 0px 0px 120px;">
-
-        <div class="container" id="container" style="transform: translate(0px, 0px); left: 0px; top: 0.001px; margin: 0px; max-width: 100%; width: 100%; max-height: 100vh; height: 100vh; padding: 0px; box-sizing: border-box; position: relative;background-image: url(images/homePageBg1.png);background-size: 100% 100%;">
+      <div class="pin-spacer normal-view" id="home">
+         <div class="container normal-container" id="container">
             <div class="wrapper" id="wrapper">
-                <div class="panel">
-                    <div class="intro">
-                       
-                    </div>
-                </div>
-                <div class="bkg"></div>
+               <div class="panel">
+                  <div class="intro">
+                  </div>
+               </div>
+               <div class="bkg"></div>
             </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="pin-spacer responsive-view" id="home" style="order: 0; place-self: auto; grid-area: auto / auto / auto / auto; z-index: auto; float: none; flex-shrink: 1; display: none; margin: 0px; inset: auto; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 100%; height: 250px; padding: 0px 0px 0px;">
-        <div class="container" id="container" style="transform: translate(0px, 0px); left: 0px; top: 0.001px; margin: 0px; max-width: 100%; width: 100%; max-height: 100%; height: 100%; padding: 0px; box-sizing: border-box; position: fixed;background-image: url(images/homePageBg1.png);background-repeat: no-repeat;background-size: cover;">
+         </div>
+      </div>
+      <div class="pin-spacer responsive-view" id="home">
+         <div class="container res-container" id="container">
             <div class="wrapper wrapper-mv" id="wrapper">
-                <div class="panel">
-                    <div class="intro" style="transform: translateY(-210px);">
-                    </div>
-                </div>
-                <div class="bkg"></div>
+               <div class="panel">
+                  <div class="intro res-intro">
+                  </div>
+               </div>
+               <div class="bkg"></div>
             </div>
-        </div>
-    </div>
-
-    <div style="width:100%;position: relative;">
-        <main class="Home_root__RQg_P" id="main">
+         </div>
+      </div>
+      <div class="Main_section_bd">
+         <main class="Home_root__RQg_P" id="main">
             <section class="CardOptions_root__NSEI7 Cus_product" id="product">
-                <div class="CardOptions_mainTitle__9WPXP Cus_product_title">
-                    <div class="navtest Cus_navtest"><span class="highlight-logo">A</span>dvanced <span class="highlight-logo">H</span>ealth <span class="highlight-logo">I</span>nformation <span class="highlight-logo">M</span>anagement and <span class="highlight-logo">S</span>ocial <span class="highlight-logo">A</span>nalytics. (AHIMSA)</div>
-                    <p class="p-text">We are an inter disciplinary team of professionals <br>(clinicians, engineers,software developers, data scientists and QA / compliance experts)<br> working together to create a public / private sector enterprise wide data driven products to:</p>
-                </div>
-                <div class="CardOptions_cards__o9cX9">
-                    <section class="Part_part__qLmOl">
-                        <div class="Part_mobImg__of2vq">
-                            <img src="images/screen1.png" alt="clinician-life-1" />
+               <div class="CardOptions_mainTitle__9WPXP Cus_product_title">
+                  <div class="navtest Cus_navtest"><span class="highlight-logo">A</span>dvanced <span class="highlight-logo">H</span>ealth <span class="highlight-logo">I</span>nformation <span class="highlight-logo">M</span>anagement and <span class="highlight-logo">S</span>ocial <span class="highlight-logo">A</span>nalytics. (AHIMSA)</div>
+                  <p class="p-text">We are an inter disciplinary team of professionals <br>(clinicians, engineers,software developers, data scientists and QA / compliance experts)<br> working together to create a public / private sector enterprise wide data driven products to:</p>
+               </div>
+               <div class="CardOptions_cards__o9cX9">
+                  <section class="Part_part__qLmOl">
+                     <div class="Part_mobImg__of2vq">
+                        <img src="images/screen1.webp" alt="by ensuring that key decision making information is available at all times" />
+                     </div>
+                     <div class="Part_partInfo__znN0e Cus_PartInfo">
+                        <h3 class="Part_partInfoTitle__Wqebm">Simplify a clinician's life at the hospital</h3>
+                        <div class="Part_partInfoDescription__tP1_V"> by ensuring that key decision making information is available at all times</div>
+                     </div>
+                  </section>
+                  <section class="Part_part__qLmOl" id="two">
+                     <div class="Part_mobImg__of2vq">
+                        <img src="images/screen2.webp" alt="data originates from his / her residence (via community nurse visit) and ensures further followup and medical compliance (post procedure / advice)" />
+                     </div>
+                     <div class="Part_partInfo__znN0e">
+                        <h3 class="Part_partInfoTitle__Wqebm">Enable follow up and tracking of every patient</h3>
+                        <div class="Part_partInfoDescription__tP1_V">data originates from his / her residence (via community nurse visit) and ensures further followup and medical compliance (post procedure / advice)</div>
+                     </div>
+                  </section>
+                  <section class="Part_part__qLmOl" id="three">
+                     <div class="Part_mobImg__of2vq">
+                        <img src="images/screen3.webp" alt="clinician-life-3" />
+                     </div>
+                     <div class="Part_partInfo__znN0e">
+                        <h3 class="Part_partInfoTitle__Wqebm">"Advanced" AI driven engine <br>facilitates:</h3>
+                        <div class="Part_partInfoDescription__tP1_V">
+                           <ul class="list-text">
+                              <li>Predictive analytics for managing patient throughput</li>
+                              <li>Measure procedure / device efficacies</li>
+                              <li>Study patient demographics vs outcomes</li>
+                              <li>Mortality (KM curves) analysis and population health studies</li>
+                           </ul>
                         </div>
-                        <div class="Part_partInfo__znN0e Cus_PartInfo">
-                            <h3 class="Part_partInfoTitle__Wqebm" >Simplify a clinician's life at the hospital</h3>
-                            <div class="Part_partInfoDescription__tP1_V"> by ensuring that key decision making information is available at all times</div>
+                     </div>
+                  </section>
+                  <section class="Part_part__qLmOl" id="four">
+                     <div class="Part_mobImg__of2vq">
+                        <img src="images/ai.webp" alt="Predictive analytics for managing patient throughput" />
+                     </div>
+                     <div class="Part_partInfo__znN0e Cus_partInfo__znN0e">
+                        <h3 class="Part_partInfoTitle__Wqebm">"Social Analytics"</h3>
+                        <div class="Part_partInfoDescription__tP1_V">
+                           <ul class="list-text">
+                              <li>Community based, patient centric, clinician driven</li>
+                              <li>Patient health and engagement as a central core</li>
+                              <li>Data owned by the patient, consent given to share on a need basis</li>
+                              <li>Real time communication with community nurse and care coordinators</li>
+                              <li>Critical health parameters can be entered, monitored and viewed on a daily basis</li>
+                           </ul>
                         </div>
-                    </section>
-                    <section class="Part_part__qLmOl" id="two">
-                        <div class="Part_mobImg__of2vq">
-                            <img src="images/screen2.png" alt="clinician-life-2" />
+                     </div>
+                  </section>
+                  <div class="CardOptions_rightContent__eLfV6">
+                     <div class="CardOptions_rightContentSticky__5B1eO">
+                        <div class="CardOptions_rightContentStickyWrapper__Cp65E">
+                           <img class="image-scroll-1" src="images/screen1.webp" alt="Community based, patient centric, clinician driven" />
                         </div>
-                        <div class="Part_partInfo__znN0e">
-                            <h3 class="Part_partInfoTitle__Wqebm">Enable follow up and tracking of every patient</h3>
-                            <div class="Part_partInfoDescription__tP1_V">data originates from his / her residence (via community nurse visit) and ensures further followup and medical compliance (post procedure / advice)</div>
-                        </div>
-                    </section>
-                    <section class="Part_part__qLmOl" id="three">
-                        <div class="Part_mobImg__of2vq">
-                            <img src="images/screen3.png" alt="clinician-life-3" />
-                        </div>
-                        <div class="Part_partInfo__znN0e">
-                            <h3 class="Part_partInfoTitle__Wqebm">"Advanced" AI driven engine <br>facilitates:</h3>
-                            <div class="Part_partInfoDescription__tP1_V">
-                                <ul class="list-text">
-                                    <li>Predictive analytics for managing patient throughput</li>
-                                    <li>Measure procedure / device efficacies</li>
-                                    <li>Study patient demographics vs outcomes</li>
-                                    <li>Mortality (KM curves) analysis and population health studies</li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </section>
-                    <section class="Part_part__qLmOl" id="four">
-                        <div class="Part_mobImg__of2vq">
-                            <img src="images/screen3.png" alt="clinician-life-4" />
-                        </div>
-                        <div class="Part_partInfo__znN0e Cus_partInfo__znN0e">
-                            <h3 class="Part_partInfoTitle__Wqebm">"Social Analytics"</h3>
-                            <div class="Part_partInfoDescription__tP1_V">
-                                <ul class="list-text">
-                                    <li>Community based, patient centric, clinician driven</li>
-                                    <li>Patient health and engagement as a central core</li>
-                                    <li>Data owned by the patient, consent given to share on a need basis</li>
-                                    <li>Real time communication with community nurse and care coordinators</li>
-                                    <li>Critical health parameters can be entered, monitored and viewed on a daily basis</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="CardOptions_rightContent__eLfV6">
-                        <div class="CardOptions_rightContentSticky__5B1eO">
-                            <div class="CardOptions_rightContentStickyWrapper__Cp65E">
-                                <img class="image-scroll-1" src="images/screen1.png" alt="clinician-life-5" /></div>
-                        </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
             </section>
             <section class="Experience_root__csOzn" id="about">
-                <h5 class="Experience_title__VYjZQ Animated_animated__ByRTS Animated_fadeIn__CK_Tf">Patient Referral and Engagement Platform (PREP)</h5>
-                <div class="Experience_content__QrQFF">
-                    <div class="Experience_blockList__1wk0M">
-                        <div class="Experience_block__Vju__ Animated_animated__ByRTS Animated_fadeIn__CK_Tf ">
-                            <div class="Experience_blockImageWrapper__PzjtC">
-                                <div class="Experience_blockImageInner__KB2wr prep-img-1"><img class="Experience_blockImage__3cAAj" alt="clinician-life-6" src="images/1.jpg" /></div>
-                            </div>
-                            <div class="Experience_blockText__ccQQd Animated_animated__ByRTS Animated_fadeIn__CK_Tf">
-                                <div class="Experience_blockTextTitle__7Am_h">PATIENT FIRST: a patient-centric approach towards providing high quality health-care</div>
-                                <div style="width: calc((100% / var(--screen-size))*100*1vw);" class="Experience_blockTextDescription__BVGzy">
-                                    <p>
-                                        <ul class="prep-text-li">
-                                            <li>Captures patient data right from referral until discharge, including previous cardiac surgeries, patient medical history, risk profiles and frailty scores.</li>
-                                            <li>Personnel from key feeder hospitals (cardiologists / admin) can view patient data originating from their region.</li>
-                                            <li>PREP ensures that NO patient gets lost in transit or while on "Waiting" or "OnHold" lists.</li>
-                                            <li>Each patient transition point is tied to a stakeholder responsible for action.</li>
-                                        </ul>
-                                    </p>
-                                </div>
-                            </div>
+               <h5 class="Experience_title__VYjZQ Animated_animated__ByRTS Animated_fadeIn__CK_Tf">Patient Referral and Engagement Platform (PREP)</h5>
+               <div class="Experience_content__QrQFF">
+                  <div class="Experience_blockList__1wk0M">
+                     <div class="Experience_block__Vju__ Animated_animated__ByRTS Animated_fadeIn__CK_Tf">
+                        <div class="Experience_blockImageWrapper__PzjtC">
+                           <div class="Experience_blockImageInner__KB2wr prep-img-1"><img class="Experience_blockImage__3cAAj" alt="Patient Referral and Engagement Platform (PREP)" src="images/1.webp" /></div>
                         </div>
-                        <div class="Experience_block__Vju__ Animated_animated__ByRTS Animated_fadeIn__CK_Tf Telehealth_Sec">
-                            <div class="Experience_blockImageWrapper__PzjtC Telehealth_Img">
-                                <div class="Experience_blockImageInner__KB2wr"><img class="Experience_blockImage__3cAAj" alt="clinician-life-7" src="images/telehealth.webp" /></div>
-                            </div>
-                            <div class="Experience_blockText__ccQQd Animated_animated__ByRTS Animated_fadeIn__CK_Tf">
-                                <div class="Experience_blockTextTitle__7Am_h Telehealth_Title">Generic Telehealth Application to increase equity of health-care</div>
-                                <div class="Experience_blockTextDescription__BVGzy">
-                                    <p>
-                                        <ul class="prep-text-li-2">
-                                            <li>Workflows and remote patient management Pathways</li>
-                                            <li>Patient-specific use-case with communication amongst patients, clinicians & stakeholders</li>
-                                            <li>Inbuilt Images and DICOM file management</li>
-                                            <li>Adherence to NZ’s HISO Standards & International compliance requirements such as GDPR, OWASP, etc</li>
-                                            <li>Cardiology focussed Telehealth application live in Waikato region of NZ (New Zealand)</li>
-                                        </ul>
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="Experience_blockText__ccQQd Animated_animated__ByRTS Animated_fadeIn__CK_Tf">
+                           <div class="Experience_blockTextTitle__7Am_h">PATIENT FIRST: a patient-centric approach towards providing high quality health-care</div>
+                           <div class="Experience_blockTextDescription__BVGzy">
+                              <p>
+                              <ul class="prep-text-li">
+                                 <li>Captures patient data right from referral until discharge, including previous cardiac surgeries, patient medical history, risk profiles and frailty scores.</li>
+                                 <li>Personnel from key feeder hospitals (cardiologists / admin) can view patient data originating from their region.</li>
+                                 <li>PREP ensures that NO patient gets lost in transit or while on "Waiting" or "OnHold" lists.</li>
+                                 <li>Each patient transition point is tied to a stakeholder responsible for action.</li>
+                              </ul>
+                              </p>
+                           </div>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                     <div class="Experience_block__Vju__ Animated_animated__ByRTS Animated_fadeIn__CK_Tf Telehealth_Sec">
+                        <div class="Experience_blockImageWrapper__PzjtC Telehealth_Img">
+                           <div class="Experience_blockImageInner__KB2wr"><img class="Experience_blockImage__3cAAj" alt="Generic Telehealth Application to increase equity of health-care" src="images/telehealth.webp" /></div>
+                        </div>
+                        <div class="Experience_blockText__ccQQd Animated_animated__ByRTS Animated_fadeIn__CK_Tf">
+                           <div class="Experience_blockTextTitle__7Am_h Telehealth_Title">Generic Telehealth Application to increase equity of health-care</div>
+                           <div class="Experience_blockTextDescription__BVGzy">
+                              <p>
+                              <ul class="prep-text-li-2">
+                                 <li>Workflows and remote patient management Pathways</li>
+                                 <li>Patient-specific use-case with communication amongst patients, clinicians & stakeholders</li>
+                                 <li>Inbuilt Images and DICOM file management</li>
+                                 <li>Adherence to NZ’s HISO Standards & International compliance requirements such as GDPR, OWASP, etc</li>
+                                 <li>Cardiology focussed Telehealth application live in Waikato region of NZ (New Zealand)</li>
+                              </ul>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </section>
-            <div class="Home_grow__7zIVc" id="services" style="background: #4c5d7ea8;">
-                <div class="FooterGrow_root__EfScL">
-                    <div class="FooterGrow_backgroundColor__PSNbU"></div>
-                    <div class="FooterGrow_background___ey_7"><img src="images/mobileBackGrow1.png" class="FooterGrow_backgroundImageMobile__o1lDU" alt="background" style="display: block;" /></div>
-                    <h2 class="FooterGrow_title__siwtB">End To End Product development </h2>
-                    <p class="FooterGrow_description__ICDDT">
-                        <ul class="services-li">
-                            <li>Our team of experienced data analysts <br> work with clinicians and other stakeholders <br> to understand their challenges.</li>
-                            <li>Architects will devise solutions that solve <br> and integrate to existing applications.</li>
-                            <li>Project Managers will oversee activities from <br> analysis to deployment goLive and support.</li>
-                        </ul>
-                    </p>
-                    <img src="images/sw-ico33.webp" class="ahimsa-tech" alt="clinician-life-9">
-                </div>
+            <div class="Home_grow__7zIVc" id="services">
+               <div class="FooterGrow_root__EfScL">
+                  <div class="FooterGrow_backgroundColor__PSNbU"></div>
+                  <div class="FooterGrow_background___ey_7"><img src="images/mobileBackGrow1.webp" class="FooterGrow_backgroundImageMobile__o1lDU" alt="Our team of experienced data analysts work with clinicians and other stakeholders to understand their challenges."></div>
+                  <h2 class="FooterGrow_title__siwtB">End To End Product development </h2>
+                  <p class="FooterGrow_description__ICDDT">
+                  <ul class="services-li">
+                     <li>Our team of experienced data analysts <br> work with clinicians and other stakeholders <br> to understand their challenges.</li>
+                     <li>Architects will devise solutions that solve <br> and integrate to existing applications.</li>
+                     <li>Project Managers will oversee activities from <br> analysis to deployment goLive and support.</li>
+                  </ul>
+                  </p>
+                  <img src="images/sw-ico33.webp" class="ahimsa-tech" alt="End To End Product development">
+               </div>
             </div>
-        </main>
-
-
-        <footer class="Footer_root__OULa2" id="contact">
-            <div class="Links_customers__JzVi5" style="width: 100%;padding: 0px 50px;margin-top: 50px;">
-                    <div class="Links_name__KKQL7">Products</div>
-                    <ul class="Links_customersList__D0wi2" style="display: flex;flex-wrap: wrap;margin-bottom: 30px;">
-                        <li class="Links_customersBox__EHTpU"><a class="Links_customersBoxEl__Y7FaX" href="https://telehealthnz.datavaultforhealth.com/#!/" target="">
-                                <div>Tele Health</div><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
-                                    <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
-                                </svg>
-                            </a></li>
-                        <li class="Links_customersBox__EHTpU"><a class="Links_customersBoxEl__Y7FaX" href="https://www.datavaultforhealth.com/prep/ahimsa/prep/cardiology/launch.htm" target="">
-                                <div>PREP</div><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
-                                    <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
-                                </svg>
-                            </a></li>
-                       <!--  <li class="Links_customersBox__EHTpU"><a class="Links_customersBoxEl__Y7FaX" href="https://www.datavaultforhealth.com/prep/ahimsa/prep/cardiology/launch.htm" target="">
-                                <div>Wl Modeling</div><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
-                                    <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
-                                </svg>
-                            </a></li> -->
-                        <li class="Links_customersBox__EHTpU"><a class="Links_customersBoxEl__Y7FaX" href="https://shdtavi.datavaultforhealth.com/nz-shd/ahimsa/procedure/v2/launch.htm" target="">
-                                <div>Structural Heart Disease Asia Pacific</div><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
-                                    <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
-                                </svg>
-                            </a></li>
-                        <li class="Links_customersBox__EHTpU"><a class="Links_customersBoxEl__Y7FaX" href="https://www.datavault.health/" target="">
-                                <div>Datavault for health</div><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
-                                    <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
-                                </svg>
-                            </a></li>
-                    </ul>
-                </div>
-            <div class="Links_root__dRYzB" style="padding: 0px 0px 49px 50px;">
-                <div class="Links_otherEl__Lolfa">
-                        <div class="Links_otherElContent__KNZhS">
-                            <div class="Links_name__KKQL7">Contact</div>
-                            <div class="Links_otherElRow__hR4gd Links_hoverButton__R6ViY">+31.643876161</div>
-                            <div class="Links_otherElRow__hR4gd Links_hoverButton__R6ViY">info@ahimsa.global</div>
-                            <div class="Links_adress__zl1m7 Links_otherElRow__hR4gd">Jade 4, Roelofarendsveen, 2371 LB, <br /> Netherlands</div>
-                        </div>
-                    </div>
-                <div class="Links_other__qe0Gj">
-                    <!-- <div class="Links_otherEl__Lolfa">
-                        <div class="Links_otherEl__Lolfa">
-                            <div class="Links_otherElContent__KNZhS">
-                                <div class="Links_name__KKQL7">&nbsp;</div>
-                                <a class="Links_otherElRow__hR4gd Links_hoverButton__R6ViY" target="" href="#intro">Home</a>
-                                <a class="Links_otherElRow__hR4gd Links_hoverButton__R6ViY" target="" href="#about">Products</a>
-                                <a class="Links_otherElRow__hR4gd Links_hoverButton__R6ViY" target="" href="#services">Services</a>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
+         </main>
+         <footer class="Footer_root__OULa2" id="contact">
+            <div class="Links_product__JzVi5">
+               <div class="Links_name__KKQL7">Products</div>
+               <ul class="Links_customersList__D0wi2">
+                  <li class="Links_customersBox__EHTpU">
+                     <a class="Links_customersBoxEl__Y7FaX" href="https://telehealthnz.datavaultforhealth.com/#!/" target="_blank">
+                        <div>Tele Health</div>
+                        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
+                           <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="Links_customersBox__EHTpU">
+                     <a class="Links_customersBoxEl__Y7FaX" href="https://www.datavaultforhealth.com/prep/ahimsa/prep/cardiology/launch.htm" target="_blank">
+                        <div>PREP</div>
+                        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
+                           <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="Links_customersBox__EHTpU">
+                     <a class="Links_customersBoxEl__Y7FaX" href="https://shdtavi.datavaultforhealth.com/nz-shd/ahimsa/procedure/v2/launch.htm" target="_blank">
+                        <div>Structural Heart Disease Asia Pacific</div>
+                        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
+                           <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="Links_customersBox__EHTpU">
+                     <a class="Links_customersBoxEl__Y7FaX" href="https://www.datavault.health/" target="_blank">
+                        <div>Datavault for health</div>
+                        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" class="Links_arrowIcon__IxCek">
+                           <path d="M0 14.1776L12.5942 1.58341H1.75V0.416748H14.5833V13.2501H13.4167V2.40591L0.8225 15.0001L0 14.1776Z"></path>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="Links_root__dRYzB Contact_footer_link">
+               <div class="Links_otherEl__Lolfa">
+                  <div class="Links_otherElContent__KNZhS">
+                     <div class="Links_name__KKQL7">Contact</div>
+                     <div class="Links_otherElRow__hR4gd Links_hoverButton__R6ViY">+31.643876161</div>
+                     <div class="Links_otherElRow__hR4gd Links_hoverButton__R6ViY">info@ahimsa.global</div>
+                     <div class="Links_adress__zl1m7 Links_otherElRow__hR4gd">Jade 4, Roelofarendsveen, 2371 LB, <br /> Netherlands</div>
+                  </div>
+               </div>
             </div>
             <div class="Line_root__IP6SS"></div>
-            <div class="Description_root__3kXk_" style="padding-bottom: 0px;">
-                <div class="Description_headline__eAwb0" style="justify-content: center;padding: 60px 170px 60px 170px;">
-                    <div class="Description_titles__QN9Gc">
-                        Terms of Service<span>|</span>
-                            <span style="font-size: 12px;vertical-align: top;margin-right:2px;">&#9400;</span>
-                            Ahimsa 2022. All rights reserved
-                    </div>
-                </div>
+            <div class="Description_root__3kXk_ Copy_right_Section">
+               <div class="Description_headline__eAwb0 Copy_right_Sub">
+                  <div class="Description_titles__QN9Gc">
+                     <span class="Terms_text">Terms of Service</span> <span class="Terms-divider">&nbsp; |</span> 
+                     <span class="Copy_right">&nbsp; &#9400; &nbsp;</span> 
+                     Ahimsa 2022. All rights reserved
+                  </div>
+               </div>
             </div>
-        </footer>
-    </div>
-    <script src="js/jquery.js"></script>
-
-     <script type="text/javascript">
-    var slides = document.querySelectorAll('.slide');
-    var btns = document.querySelectorAll('.btn');
-    let currentSlide = 1;
-
-    // Javascript for image slider manual navigation
-    var manualNav = function(manual){
-      slides.forEach((slide) => {
-        slide.classList.remove('active');
-
-        btns.forEach((btn) => {
-          btn.classList.remove('active');
-        });
-      });
-
-      slides[manual].classList.add('active');
-      btns[manual].classList.add('active');
-    }
-
-    btns.forEach((btn, i) => {
-      btn.addEventListener("click", () => {
-        manualNav(i);
-        currentSlide = i;
-      });
-    });
-
-    // Javascript for image slider autoplay navigation
-    var repeat = function(activeClass){
-      let active = document.getElementsByClassName('active');
-      let i = 1;
-
-      var repeater = () => {
-        setTimeout(function(){
-          [...active].forEach((activeSlide) => {
-            activeSlide.classList.remove('active');
-          });
-
-        slides[i].classList.add('active');
-        btns[i].classList.add('active');
-        i++;
-
-        if(slides.length == i){
-          i = 0;
-        }
-        if(i >= slides.length){
-          return;
-        }
-        repeater();
-      }, 6000);
-      }
-      repeater();
-    }
-    repeat();
-    </script>  
-
-    <script src="js/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
-    <script src="js/gsap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <script id="rendered-js">
-    gsap.registerPlugin("ScrollTrigger");
-
-    let scene = gsap.timeline();
-    let intro_tl = gsap.timeline();
-    let part1_tl = gsap.timeline();
-    let part2_tl = gsap.timeline();
-    let part3_tl = gsap.timeline();
-    let part4_tl = gsap.timeline();
-    let part5_tl = gsap.timeline();
-    let outro_tl = gsap.timeline();
-
-    ScrollTrigger.create({
-        trigger: "#container",
-        pin: true,
-        start: "top top",
-        end: "+=3500"
-    });
-
-
-    gsap.set(".specs", {
-        x: -160,
-        opacity: 0
-    });
-
-    gsap.set(".chars", {
-        x: 260
-    });
-
-    part2_tl.set(".models li", {
-        opacity: 0
-    });
-
-    part3_tl.set(".specs dt", {
-        opacity: 0
-    });
-
-    part3_tl.set(".specs dd", {
-        opacity: 0
-    });
-
-    part4_tl.set(".chars h2", {
-        opacity: 0
-    });
-
-    part4_tl.set(".chars dt", {
-        opacity: 0
-    });
-
-    part4_tl.set(".chars dd", {
-        opacity: 0
-    });
-
-
-    // TIMELINE: Intro
-    intro_tl.
-    fromTo(
-        "#wrapWin", {
-            height: 80
-        },
-
-        {
-            height: 800,
-            duration: 0.1
-        }).
-
-
-    fromTo(
-        "#liberty", {
-            scale: 0.8,
-            y: -300
-        },
-
-        {
-            scale: 1,
-            y: 0,
-            duration: 0.1
-        }).
-
-
-    to("#logo", {
-        scrollTrigger: {
-            start: 300,
-            end: 500,
-            scrub: 0.5
-        },
-
-        y: -160,
-        scale: 0.6,
-        duration: 0.6,
-        ease: "expo.out"
-    }).
-
-    to("#intro-h1", {
-        scrollTrigger: {
-            start: 500,
-            end: 700,
-            scrub: 0.5
-        },
-
-        scale: 0,
-        duration: 0.6,
-        ease: "expo.out"
-    }).
-
-    to("#intro-h3", {
-        scrollTrigger: {
-            start: 550,
-            end: 750,
-            scrub: 0.5
-        },
-
-        scale: 0,
-        duration: 0.6,
-        ease: "expo.out"
-    });
-
-
-    // TIMELINE: Part 1
-    part1_tl.
-    fromTo(
-        "#liberty", {
-            scale: 1,
-            y: 0
-        },
-
-        {
-            scale: 0.8,
-            y: -300,
-            duration: 1,
-            ease: "sine.out",
-            scrollTrigger: {
-                start: 1000,
-                end: 1200,
-                scrub: 0.5
-            }
-        }).
-
-
-
-    from("#panel-h1", {
-        scrollTrigger: {
-            start: 1300,
-            end: 1500,
-            scrub: 0.5
-        },
-
-        scale: 0,
-        opacity: 0,
-        duration: 1,
-        ease: "sine.out"
-    }).
-
-    from(".models li", {
-        scrollTrigger: {
-            start: 1250,
-            end: 1450,
-            scrub: 1
-        },
-
-        opacity: 0,
-        x: -20,
-        duration: 1,
-        stagger: 0.3,
-        ease: "sine.out"
-    }).
-
-    from(".rotator", {
-        scrollTrigger: {
-            start: 1250,
-            end: 1450,
-            scrub: 1
-        },
-
-        opacity: 0,
-        scale: 0,
-        duration: 1,
-        ease: "sine.out"
-    });
-
-
-    // TIMELINE: Part 2
-    part2_tl.
-    from("#panel-h1", {
-        scrollTrigger: {
-            start: 2000,
-            end: 2200,
-            scrub: 1
-        },
-
-        scale: 1,
-        duration: 1,
-        ease: "sine.out"
-    }).
-
-    fromTo(
-        ".models li", {
-            x: 0,
-            opacity: 1
-        },
-
-        {
-            x: -20,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.3,
-            ease: "sine.out",
-            scrollTrigger: {
-                start: 2000,
-                end: 2200,
-                scrub: 1
-            }
-        }).
-
-
-
-    from(".rotator", {
-        scrollTrigger: {
-            start: 2000,
-            end: 2200,
-            scrub: 1
-        },
-
-        scale: 1,
-        duration: 1,
-        ease: "sine.out"
-    });
-
-
-    // TIMELINE: Part 3
-    part3_tl.
-    fromTo(
-        "#wrapWin", {
-            height: 800
-        },
-
-        {
-            scrollTrigger: {
-                start: 2500,
-                end: 2700,
-                scrub: 1
-            },
-
-            height: 80,
-            duration: 2,
-            ease: "sine.out"
-        }).
-
-
-    to("#liberty", {
-        scrollTrigger: {
-            start: 2600,
-            end: 2800,
-            scrub: 1
-        },
-
-        x: 400,
-        duration: 2,
-        ease: "sine.out"
-    }).
-
-    to(".specs", {
-        scrollTrigger: {
-            start: 2600,
-            end: 2800,
-            scrub: 1
-        },
-
-        opacity: 1,
-        duration: 2,
-        ease: "sine.out"
-    }).
-
-    from(".specs h2", {
-        duration: 1,
-        opacity: 0,
-        x: -30,
-        scrollTrigger: {
-            start: 2600,
-            end: 2800,
-            scrub: 1
-        }
-    }).
-
-
-    from(".specs dt", {
-        duration: 1,
-        opacity: 0,
-        stagger: 0.3,
-        x: -30,
-        scrollTrigger: {
-            start: 2600,
-            end: 2800,
-            scrub: 2
-        }
-    }).
-
-
-    from(
-        ".specs dd", {
-            duration: 1,
-            opacity: 0,
-            stagger: 0.3,
-            x: -30,
-            scrollTrigger: {
-                start: 2600,
-                end: 2800,
-                scrub: 2
-            }
-        },
-
-
-        "-=.5").
-
-    from(
-        ".specs dd", {
-            duration: 1,
-            opacity: 1,
-            stagger: 0.3,
-            x: 0,
-            scrollTrigger: {
-                start: 3200,
-                end: 3400,
-                scrub: 1
-            }
-        },
-
-
-        "-=.5").
-
-    from(".specs dt", {
-        duration: 1,
-        opacity: 1,
-        stagger: 0.3,
-        x: 0,
-        scrollTrigger: {
-            start: 3200,
-            end: 3400,
-            scrub: 1
-        }
-    }).
-
-
-    from(".specs h2", {
-        duration: 1,
-        opacity: 1,
-        x: 0,
-        scrollTrigger: {
-            start: 3200,
-            end: 3400,
-            scrub: 1
-        }
-    }).
-
-
-    fromTo(
-        "#liberty", {
-            x: 400
-        },
-
-        {
-            scrollTrigger: {
-                start: 3500,
-                end: 3800,
-                scrub: 1
-            },
-
-            x: -360,
-            duration: 3,
-            ease: "sine.out"
-        });
-
-
-
-    // TIMELINE: Part 4
-    part4_tl.
-    from(".chars h2", {
-        duration: 1,
-        opacity: 0,
-        x: 30,
-        scrollTrigger: {
-            start: 3800,
-            end: 4000,
-            scrub: 1
-        }
-    }).
-
-
-    from(".chars dt", {
-        duration: 1,
-        opacity: 0,
-        stagger: 0.3,
-        x: 30,
-        scrollTrigger: {
-            start: 3800,
-            end: 4000,
-            scrub: 2
-        }
-    }).
-
-
-    from(
-        ".chars dd", {
-            duration: 1,
-            opacity: 0,
-            stagger: 0.3,
-            x: 30,
-            scrollTrigger: {
-                start: 3800,
-                end: 4000,
-                scrub: 2
-            }
-        },
-
-
-        "-=.5");
-
-
-    // TIMELINE: Part 5
-    part5_tl.
-    fromTo(
-        ".chars h2", {
-            opacity: 1,
-            x: 0
-        },
-
-        {
-            duration: 1,
-            opacity: 0,
-            x: 30,
-            scrollTrigger: {
-                start: 4200,
-                end: 4400,
-                scrub: 1
-            }
-        }).
-
-
-
-    fromTo(
-        ".chars dt", {
-            opacity: 1,
-            x: 0
-        },
-
-        {
-            duration: 1,
-            opacity: 0,
-            stagger: 0.3,
-            x: 30,
-            scrollTrigger: {
-                start: 4200,
-                end: 4400,
-                scrub: 2
-            }
-        }).
-
-
-
-    fromTo(
-        ".chars dd", {
-            opacity: 1,
-            x: 0
-        },
-
-        {
-            duration: 1,
-            opacity: 0,
-            stagger: 0.3,
-            x: 30,
-            scrollTrigger: {
-                start: 4200,
-                end: 4400,
-                scrub: 2
-            }
-        },
-
-
-        "-=.5").
-
-    fromTo(
-        "#liberty", {
-            x: -360
-        },
-
-        {
-            scrollTrigger: {
-                start: 4400,
-                end: 4600,
-                scrub: 1
-            },
-
-            x: 0,
-            duration: 3,
-            ease: "sine.out"
-        });
-
-
-
-    // TIMELINE: Outro
-    outro_tl.
-    fromTo(
-        "#wrapWin", {
-            height: 80
-        },
-
-        {
-            scrollTrigger: {
-                start: 5000,
-                end: 5200,
-                scrub: 1
-            },
-
-            height: 800,
-            duration: 2,
-            ease: "sine.out"
-        }).
-
-
-    from(
-        "#liberty", {
-            scale: 0.8,
-            y: -300
-        },
-
-        {
-            scrollTrigger: {
-                start: 5200,
-                end: 5400,
-                scrub: 1
-            },
-
-            x: 0,
-            scale: 0.7,
-            y: -340,
-            duration: 3,
-            ease: "sine.out"
-        }).
-
-
-    from(".outro h2", {
-        scrollTrigger: {
-            start: 5300,
-            end: 5400,
-            scrub: 1
-        },
-
-        duration: 1,
-        y: 30,
-        opacity: 0
-    }).
-
-    from(".outro p", {
-        scrollTrigger: {
-            start: 5400,
-            end: 5500,
-            scrub: 1
-        },
-
-        duration: 1,
-        y: 30,
-        opacity: 0
-    }).
-
-    from(".outro button", {
-        scrollTrigger: {
-            start: 5500,
-            end: 5600,
-            scrub: 1
-        },
-
-        duration: 1,
-        y: 30,
-        opacity: 0
-    });
-
-
-    // TIMELINE: Main
-    scene.
-    set("#liberty", {
-        x: 0
-    }).
-
-    add(intro_tl).
-    add(part1_tl).
-    add(part2_tl).
-    add(part3_tl).
-    add(part4_tl).
-    add(part5_tl).
-    add(outro_tl);
-    //# sourceURL=pen.js
-
-
-    gsap.config({
-        autoSleep: 60,
-        force3D: false,
-        nullTargetWarn: false,
-        trialWarn: false,
-        units: { left: "%", top: "%", rotation: "rad" }
-    });
-    </script>
-
-
-
-
-    <script>
-    $(document).ready(function() {
-        $(window).scroll(function() {
-
-            var $height = $(window).scrollTop();
-
-            if ($height >= 1800) {
-                $(".image-scroll-1").attr("src", "images/screen1.png");
-            }
-
-
-            if ($height >= 2300) {
-                $(".image-scroll-1").attr("src", "images/screen2.png");
-            }
-
-            if ($height >= 2800) {
-                $(".image-scroll-1").attr("src", "images/screen3.png");
-            }
-
-
-            if ($height >= 300) {
-                $('.wrapper-mv').fadeOut();
-                $('#responsive-header-anchor').fadeIn();
-            }
-            else {
-                $('.wrapper-mv').fadeIn();
-                $('#responsive-header-anchor').fadeOut();
-            }
-
-        });
-
-
-        $("a[href^='#']").click(function(e) {
-            e.preventDefault();
-            var position = $($(this).attr("href")).offset().top;
-
-            $("body, html").animate({
-                scrollTop: position
-            } /* speed */ );
-        });
-
-
-        $(".Header_mobileMenuButton__9qrK8").click(function(){
-            $(".MobileMenu_root__xl8fC").css("opacity","1");
-            $(".MobileMenu_root__xl8fC").css("pointer-events","auto");
-        });
-        $(".Menu_close").click(function(){
-            $(".MobileMenu_root__xl8fC").css("opacity","0");
-            $(".MobileMenu_root__xl8fC").css("pointer-events","none");
-        });
-
-        $(".M_Link").click(function(){
-            $(".MobileMenu_root__xl8fC").css("opacity","0");
-            $(".MobileMenu_root__xl8fC").css("pointer-events","none");
-        });
-
-        
-        
-
-
-        window.console = window.console || function(t) {};
-
-        if (document.location.search.match(/type=embed/gi)) {
-            window.parent.postMessage("resize", "*");
-        }
-
-    });
-
-    
-    </script>
-
-</body>
-
+         </footer>
+      </div>
+      <script src="js/jquery.js"></script>
+      <script type="text/javascript">
+         var slides = document.querySelectorAll('.slide');
+         var btns = document.querySelectorAll('.btn');
+         let currentSlide = 1;
+         
+         // Javascript for image slider manual navigation
+         var manualNav = function(manual) {
+             slides.forEach((slide) => {
+                 slide.classList.remove('active');
+         
+                 btns.forEach((btn) => {
+                     btn.classList.remove('active');
+                 });
+             });
+         
+             slides[manual].classList.add('active');
+             btns[manual].classList.add('active');
+         }
+         
+         btns.forEach((btn, i) => {
+             btn.addEventListener("click", () => {
+                 manualNav(i);
+                 currentSlide = i;
+             });
+         });
+         
+         // Javascript for image slider autoplay navigation
+         var repeat = function(activeClass) {
+             let active = document.getElementsByClassName('active');
+             let i = 1;
+         
+             var repeater = () => {
+                 setTimeout(function() {
+                     [...active].forEach((activeSlide) => {
+                         activeSlide.classList.remove('active');
+                     });
+         
+                     slides[i].classList.add('active');
+                     btns[i].classList.add('active');
+                     i++;
+         
+                     if (slides.length == i) {
+                         i = 0;
+                     }
+                     if (i >= slides.length) {
+                         return;
+                     }
+                     repeater();
+                 }, 6000);
+             }
+             repeater();
+         }
+         repeat();
+      </script>
+      <script src="js/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+      <script src="js/gsap.min.js"></script>
+      <script src="js/ScrollTrigger.min.js"></script>
+      <script id="rendered-js">
+         gsap.registerPlugin("ScrollTrigger");
+         
+         ScrollTrigger.create({
+             trigger: "#container",
+             pin: true,
+             start: "top top",
+             end: "+=3500"
+         });
+         
+         gsap.config({
+             autoSleep: 60,
+             force3D: false,
+             nullTargetWarn: false,
+             trialWarn: false,
+             units: { left: "%", top: "%", rotation: "rad" }
+         });
+      </script>
+      <script>
+         $(document).ready(function() {
+             $(window).scroll(function() {
+                 var $height = $(window).scrollTop();
+         
+                 if ($height >= 1800) {
+                     $(".image-scroll-1").attr("src", "images/screen1.webp");
+                 }
+                 if ($height >= 2300) {
+                     $(".image-scroll-1").attr("src", "images/screen2.webp");
+                 }
+                 if ($height >= 2800) {
+                     $(".image-scroll-1").attr("src", "images/screen3.webp");
+                 }
+             });
+         
+             $("a[href^='#']").click(function(e) {
+                 e.preventDefault();
+                 var position = $($(this).attr("href")).offset().top;
+                 $("body, html").animate({
+                     scrollTop: position
+                 } /* speed */ );
+             });
+             $(".Header_mobileMenuButton__9qrK8").click(function() {
+                 $(".MobileMenu_root__xl8fC").css("opacity", "1");
+                 $(".MobileMenu_root__xl8fC").css("pointer-events", "auto");
+             });
+             $(".Menu_close").click(function() {
+                 $(".MobileMenu_root__xl8fC").css("opacity", "0");
+                 $(".MobileMenu_root__xl8fC").css("pointer-events", "none");
+             });
+             $(".M_Link").click(function() {
+                 $(".MobileMenu_root__xl8fC").css("opacity", "0");
+                 $(".MobileMenu_root__xl8fC").css("pointer-events", "none");
+             });
+         });
+      </script>
+   </body>
 </html>
